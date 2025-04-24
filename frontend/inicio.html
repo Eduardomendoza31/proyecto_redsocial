@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Inicio de Sesión</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+      background-color: #f5f5f5;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    #botones {
+      margin-bottom: 20px;
+    }
+
+    #botones button {
+      padding: 10px 20px;
+      margin: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #botones button:hover {
+      background-color: #388e3c;
+    }
+
+    form {
+      display: none;
+      max-width: 400px;
+      margin: auto;
+      text-align: left;
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 15px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+
+    button[type="submit"] {
+      margin-top: 20px;
+      background-color: #2196F3;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #1976D2;
+    }
+
+    #respuesta {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #d32f2f;
+    }
+  </style>
+</head>
+<body>
+
+  <h2 id="titulo">Inicio</h2>
+
+  <div id="botones">
+    <button onclick="mostrarLogin()">Iniciar Sesión</button>
+    <button onclick="mostrarRegistro()">Registrarme</button>
+  </div>
+
+  <form id="login">
+    <label for="loginCorreo">Correo:</label>
+    <input type="email" id="loginCorreo" required>
+
+    <label for="loginContraseña">Contraseña:</label>
+    <input type="password" id="loginContraseña" required>
+
+    <button type="submit">Iniciar Sesión</button>
+  </form>
+
+  <form id="registro" enctype="multipart/form-data">
+    <label for="registroNombre">Nombre:</label>
+    <input type="text" id="registroNombre" required>
+
+    <label for="registroCorreo">Correo:</label>
+    <input type="email" id="registroCorreo" required>
+
+    <label for="registroContraseña">Contraseña:</label>
+    <input type="password" id="registroContraseña" name="contrasena" required>
+
+
+    <label for="registroBiografia">Biografía:</label>
+    <textarea id="registroBiografia"></textarea>
+
+    <label for="registroFoto">Foto de perfil:</label>
+    <input type="file" id="registroFoto" name="foto" accept="image/*">
+
+    <button type="submit">Registrarme</button>
+  </form>
+
+  <p id="respuesta"></p>
+
+  <!-- Tu script al final para que reconozca los IDs -->
+  <script src="js/acceso.js"></script>
+</body>
+</html>

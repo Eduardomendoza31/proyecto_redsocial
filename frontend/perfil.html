@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mi Perfil</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 5px;
+    }
+    button {
+      margin-top: 15px;
+      padding: 8px 12px;
+    }
+    #logout {
+      background-color: crimson;
+      color: white;
+      float: right;
+    }
+    #preview {
+      display: block;
+      margin-top: 15px;
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border: 2px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h2>👤 Mi Perfil</h2>
+  <button id="logout">Cerrar Sesión</button>
+
+  <form id="perfilForm" enctype="multipart/form-data">
+    <label>Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required />
+
+    <label>Correo:</label>
+    <input type="email" id="correo" name="correo" disabled />
+
+    <label>Biografía:</label>
+    <textarea id="biografia" name="biografia"></textarea>
+
+    <label>Foto de perfil:</label>
+    <input type="file" id="foto" name="foto" accept="image/*" />
+
+    <img id="preview" src="" alt="Foto de perfil" />
+
+    <button type="submit">Actualizar Perfil</button>
+  </form>
+
+  <p id="respuesta"></p>
+
+  <script src="js/perfil.js"></script>
+</body>
+</html>

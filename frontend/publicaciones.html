@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Publicaciones</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f3f3;
+      padding: 20px;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    .contenedor {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .formulario-publicar {
+      flex: 1;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .lista-publicaciones {
+      flex: 2;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .publicacion {
+      border-bottom: 1px solid #ccc;
+      padding: 10px 0;
+    }
+
+    .publicacion img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+
+    .boton-like {
+      color: green;
+      cursor: pointer;
+      margin-top: 5px;
+    }
+
+    .comentario {
+      font-size: 14px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>📢 Publicaciones</h2>
+  <p>Bienvenido, <strong id="nombreUsuario"></strong> 👋</p>
+
+  <div class="contenedor">
+
+    <!-- Formulario -->
+    <div class="formulario-publicar">
+      <form id="formPublicacion" enctype="multipart/form-data">
+        <label>¿Qué estás pensando?</label><br>
+        <textarea id="texto" required></textarea><br><br>
+
+        <label>Subir imagen (opcional):</label><br>
+        <input type="file" id="imagen" name="imagen" accept="image/*"><br><br>
+
+        <button type="submit">Publicar</button>
+      </form>
+      <p id="respuesta"></p>
+    </div>
+
+    <!-- Publicaciones -->
+    <div class="lista-publicaciones" id="listaPublicaciones">
+      <!-- Aquí se insertarán las publicaciones desde JS -->
+    </div>
+
+  </div>
+
+  <script src="js/publicaciones.js"></script>
+</body>
+</html>
